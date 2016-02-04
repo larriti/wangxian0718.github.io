@@ -14,4 +14,5 @@
 
 下载好了，将`.rpm`包解压找到 `opt/google/chrome/` 中的 `PepperFlash` 文件夹。我发现这个文件夹中只有一个 `libpepflashplayer.so` 就想这是一个动态库文件，那我只要把这个文件放到 `/usr/lib`下面就行了吧，于是动手就做，发现还是无果。觉得奇怪之后还是利用博客中方法说是要改什么文件，发现并没有所提到的 `/etc/chromium-browser/default` 这个文件，我只发现和`libpepflashplayer.so` 一起的只有 `manifest.json` 这个文件。之后脑袋一灵光就把整个 `PepperFlash` 文件夹放到 `/usr/lib/` 下面，之后发现终于可以了。
 来一张效果图：
+
 ![效果图](/images/screenshot.png)
