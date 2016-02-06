@@ -1,3 +1,6 @@
+---
+layout:post
+---
 # Archlinux install chromium pepper flash player
 ---
 最近一直被chromium浏览器的flash player插件困扰，之前也安装了试了好几种方案都没有成功过。现在我就把我以前试过的几种方法说下，方便大家参考。
