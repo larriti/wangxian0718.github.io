@@ -1,4 +1,5 @@
 #Archlinux MySQL PHP phpmyadmin Apache PHP-Apache Install
+
 ##By wangxian
 
 1. ### Install the MySQL:
@@ -40,28 +41,24 @@
 	[参考官方](https://wiki.archlinux.org/index.php/PhpMyAdmin)
     1. ` sudo pacman -S phpmyadmin php-mcrypt
     2. editing /etc/php/php.ini, and uncomment the following line:
-    	```
+    ```
         extension=mysqli.so
 		extension=mcrypt.so
-        ```
+    ```
     3. Create the Apache configuration file:
-    	```
-        /etc/httpd/conf/extra/phpmyadmin.conf
-        ```
-        ```
+        `/etc/httpd/conf/extra/phpmyadmin.conf`
+    ```
         Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
-		<Directory "/usr/share/webapps/phpMyAdmin">
-			DirectoryIndex index.php
-    		AllowOverride All
-    		Options FollowSymlinks
-    		Require all granted
-		</Directory>
-        ```
+        <Directory "/usr/share/webapps/phpMyAdmin">
+            DirectoryIndex index.php
+            AllowOverride All
+            Options FollowSymlinks
+            Require all granted
+        </Directory>
+    ```
     4. And include it in /etc/httpd/conf/httpd.conf:
-    	```
-        # phpMyAdmin configuration
-		Include conf/extra/phpmyadmin.conf
-        ```
+    	phpMyAdmin configuration
+		`Include conf/extra/phpmyadmin.conf`
     5. restart the http.service
     	` sudo systemctl restart httpd `
     	OK, It's done to accss the http://localhost/phpmyadmin
