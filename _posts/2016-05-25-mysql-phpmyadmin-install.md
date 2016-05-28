@@ -1,5 +1,8 @@
-#Archlinux MySQL PHP phpmyadmin Apache PHP-Apache Install
-
+---
+layout: post
+title: Archlinux MySQL PHP phpmyadmin Apache PHP-Apache Install
+date: 2016-05-25T12:30:00.000Z
+---
 ## By wangxian
 
 1. ### Install the MySQL:
