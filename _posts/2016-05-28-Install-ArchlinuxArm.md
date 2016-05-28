@@ -8,7 +8,7 @@ Note: The current installation uses the 32-bit Raspberry Pi 2 armv7h root filesy
 Also note: The Raspberry Pi 3 has higher power requirements than the Raspberry Pi 2. A power supply rated at 2.5A is the official recommendation. Using an insufficient power supply will result in random, inexplicable errors and filesystem corruption.
 
 Replace sdX in the following instructions with the device name for the SD card as it appears on your computer.
-### Install System
+## Install System
 
 1. Start fdisk to partition the SD card:
 	`fdisk /dev/sdX`
@@ -21,18 +21,12 @@ Replace sdX in the following instructions with the device name for the SD card a
     Write the partition table and exit by typing w.
 3. Create and mount the FAT filesystem:
     `mkfs.vfat /dev/sdX1`
-    
     `mkdir boot`
-    
     `mount /dev/sdX1 boot`
-    
 4. Create and mount the ext4 filesystem:
     `mkfs.ext4 /dev/sdX2`
-    
     `mkdir root`
-    
     `mount /dev/sdX2 root`
-    
 5. Download and extract the root filesystem (as root, not via sudo):
     wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz
     bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
@@ -57,21 +51,15 @@ The default root password is root.
 	`passwd username`
 5. Update system
 	`pacman -Syy`
-    
     `pacman -Syu`
 6. Install vim text editor
 	`pacman -S vim`
 7. Change the mirrorlist
 	`vim /etc/pacman.d/mirrorlist`
-    
     `中科大的源`
-    
     `Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo`
-    
-    `清华大学的源`
-    
+    `清华大学的源` 
     `Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo`
-    
 8. Update
 	`pacman  -Syy`
 9. Install xdg-user-dirs在home目录下生成文件夹

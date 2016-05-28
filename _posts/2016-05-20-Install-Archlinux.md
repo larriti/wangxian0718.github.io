@@ -3,7 +3,7 @@ layout: post
 title: install Archlinux
 date: 2016-05-20T14:37:44.000Z
 ---
-##Install Archlinux ArchWay
+## Install Archlinux ArchWay
 
 1. `pacman -Syy`
 2. `pacman -S reflector`
